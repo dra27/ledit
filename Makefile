@@ -3,8 +3,8 @@
 BINDIR=/usr/local/bin
 LIBDIR=/usr/local/lib
 MANDIR=/usr/local/man/man1
-OCAMLC=ocamlc
-OCAMLOPT=ocamlopt
+OCAMLC=ocamlc -I +unix
+OCAMLOPT=ocamlopt -I +unix
 CAMLP5=camlp5r -I ext
 OBJS=cursor.cmo ledit.cmo go.cmo
 OTHER_OBJS=unix.cma -I `camlp5 -where` gramlib.cma
